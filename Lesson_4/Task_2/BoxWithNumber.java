@@ -10,7 +10,7 @@ public class BoxWithNumber<N extends Number> {
         this.number = number;
     }
 
-    public double average(){
+    public double average() {
         double sum = 0.0;
         for (N n : number) {
             sum += n.doubleValue();
@@ -19,7 +19,8 @@ public class BoxWithNumber<N extends Number> {
     }
 
     public boolean compareAverage(BoxWithNumber<?> box2) {
-        if(Math.abs(this.average() - box2.average()) < 0.000000001) return true;
+        if (Math.abs(this.average() - box2.average()) < 0.000000001)
+            return true;
         return false;
     }
 }
